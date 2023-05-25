@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+ --primary-color : #F97B22;
+ --secondary-color: #FEE8B0;
+}
+
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+html{
+      scroll-behavior: smooth;
+}
+body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      position: relative;
+}
+
+/* Skip Content */
+.skip-content{
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 8px;
+  z-index: 101;
+  text-decoration: none;
+}
+
+.skip-content:focus{
+  top: 80px;
+}
+
+
+  
+/* Header */
+header{
+      background-color: var(--primary-color);      
+      width: 100%;
+}
+    
+nav{
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      align-items: center;
+      padding: 10px;
+      z-index: 98;
+}
+
+.nav-title{
+      font-weight: 500;
+      color: white;
+      text-align: center;
+}
+
+.nav-title span{
+      color: var(--secondary-color) ;
+}
+
+#hamburgerButton{
+      min-width: 44px;
+      min-height: 44px;
+      font-size: 20px;
+      font-weight: 400;
+      background-color: var(--secondary-color);
+      padding: 5px;
+      border: none;
+      border-radius: 2px;
+}
+
+.nav-list{
+      display: none;
+      top: 0;
+      left: 0;
+      position: absolute;
+}
+
+.active li{
+      width: 100%;
+      margin: 20px 0px;
+      list-style: none;
+      padding: 10px 0px;
+}
+
+.active li:hover{
+      background-color: var(--primary-color);
+      color: #fff;
+}
+.nav-list li a {
+      padding: 20px;
+      font-weight: 400;
+      text-decoration: none;
+      color: black;
+      text-transform: uppercase;
+}
+
+.active{
+      transition: .5s ease-in;
+      background-color: var(--secondary-color);
+      z-index: 99;
+      align-items: center;
+      display: inline-block;
+      transform: translateX(0%);
+      width: 65%;
+      height: 100vh;
+}
+
+/* Header */
+
+/* Hero */
+
+.hero{
+      display: flex;
+      align-items: center;
+      min-height: 600px;
+      width: 100%;
+      text-align: center;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      z-index: 96;
+      background-image: url("../public/images/heros/hero-image_2.jpg");   
+    }
+    
+.hero::before{
+    background-color: black;
+    content: "";
+    height: 100%;
+    width: 100%; 
+    position: absolute; 
+    opacity: 50%;
+}
+
+.hero-inner {
+      /* position: absolute; */
+      margin: 0 auto;
+      max-width: 800px;
+      width: 60%;
+      z-index: 95;
+    }
+    
+    .hero-title{
+      z-index: 97;
+      color: #fff;
+      font-weight: 500;
+      font-size: 30px;
+}
+
+.hero-tagline{
+      color: #fff;
+      margin-top: 15px;
+      font-size: 12px;
+      font-weight: 300;
+}
+
+/* Main */
+main{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content{
+  padding: 32px;
+}
+
+/* Headline */
+
+.headline{
+  overflow: auto;
+}
+
+.headline-figure{
+  background-image: url("../public/images/heros/hero-image_1.jpg");
+  min-height: 200px;
+  width: 100%;
+  background-size: cover;
+}
+
+
+.headline-figure figcaption{
+  text-align: center;
+  color: white;
+  font-size: .5rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.headline-content{
+  width: 100%;
+  padding: 32px 32px;
+}
+
+.headline-title{
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.headline-description{
+  font-size: 14px;
+  font-weight: 100;
+  text-align: justify;
+}
+
+.headline-button{
+  margin-top: 20px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 20px 20px;
+  font-size: 14px;
+  font-weight: 800;
+  color: black;
+  border: none;
+  border-radius: 6px;
+}
+
+.headline-button:hover{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* Cards */
+
+.posts{
+  width: 100%;
+}
+
+
+.post-title{
+  font-size: 36px;
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.post-item{
+  margin-top: 50px;
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: (auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  gap: 20px;
+  grid-template-rows: auto;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 8px;
+  min-width: 200px;
+  background-color: var(--primary-color);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  position: relative;
+}
+
+.card-image img{
+  padding: 0;
+  height: 180px;
+  width: 100%;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+}
+
+.card-city{
+  position: absolute;
+  text-decoration: none;
+  color: #fff;
+  font-size: 10px;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  background-color: black;
+  border-bottom: 6px;
+}
+
+.card-rating{
+  padding: 0px 8px ;
+  position: absolute;
+  top: 145px;
+  right: 0;
+  display: inline-block;
+  color: #FFDA1C;
+  font-weight: 600;
+  background-color: black;
+}
+
+.card-description{
+  padding: 20px;
+  width: 100%;
+}
+
+.card-description .description{
+  margin-top: 5px;
+}
+
+.card-title{
+  font-size: 20px;
+}
+
+.card-title a{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card-title a{
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.description{
+  display: -webkit-box;
+  font-size: 12px;
+  font-weight: 100;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.food-menu{
+  margin-top: 30px;
+  display: flex;
+  gap: 30%;
+}
+
+.food-menu h3{
+  left:0;
+}
+
+
+.food {
+  width: 100%;
+  max-width: 800px;
+  padding: 50px 50px;
+}
+
+.food-title{
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.food-poster{
+  border-radius: 1%;
+  width: 100%;
+}
+
+.food-info{
+  text-transform: uppercase;
+}
+
+.food-info h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+
+.food-description{
+  text-align: justify;
+}
+
+.food-review{
+  margin: 20px 0px;
+  display: grid;
+  gap:10px;
+}
+
+.container h2{
+  margin-top: 20px;
+  margin-left: 30px;
+  font-size: 30px;
+}
+
+
+/* Like Button */
+.like {
+  z-index: 1000;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  width: 100%;
+  background-color: var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 5px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.links {
+  padding: 20px;
+}
+
+.links .title {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.footer-links ul {
+  padding-top: 5px;
+}
+
+.footer-links li {
+  list-style: none;
+}
+
+.footer-links li a {
+  display: block;
+  text-decoration: none;
+  color: #212121;
+  font-size: 15px;
+  font-weight: 300;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px;
+  margin: 5px;
+
+}
+
+
+
+@media screen and (min-width: 760px) {
+      #hamburgerButton{
+            display: none;
+      }    
+
+      .nav-list{
+            display: flex;
+            position: relative;
+      }
+
+      
+      
+      .nav-list li  {
+            padding: 0px 15px;
+            list-style: none;
+            text-align: center;
+            font-size: 13px;
+      }
+      
+      .nav-list li a {
+            color: #fff;
+      }
+      
+      .jumbotron img {
+            width: 100%;
+            height: 500px; 
+      }
+      
+      .headline{
+            display: flex;
+      }
+
+      .post-item{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+    }
+    
+    @media screen and (min-width:1200px) {
+      .hero{
+        min-width: 1000px;
+      }
+
+      .post-item{
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;      
+      }
+
+}
